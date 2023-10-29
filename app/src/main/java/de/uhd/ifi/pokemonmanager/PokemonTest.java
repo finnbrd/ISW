@@ -47,5 +47,23 @@ public class PokemonTest {
         System.out.println();
         System.out.println("Testen von getNumber");
         System.out.println("Nummer von p2: " + p2.getNumber());
+
+        //Test Trainer:
+        System.out.println();
+        System.out.println("Testing Trainer:");
+        Trainer t1;
+        t1 = new Trainer("Tim", "Schneider");
+        Pokemon p3 = new Pokemon("Bulbasar", Type.WATER);
+        t1.linkPokemon(p1);
+        Pokemon p4 = new Pokemon("Pikachu", Type.FIRE);
+        t1.linkPokemon(p4);
+        System.out.println(t1);
+        Trainer t2 = new Trainer("Anna", "Schwegmann");
+        t2.linkPokemon(p3);
+        System.out.println(t2);
+        t1.listPokemons();
+        //System.out.println(p2.getTrainer());
+        t1.listPokemonsOfType(Type.WATER);
+        t1.showIthPokemon(1);
     }
 }
